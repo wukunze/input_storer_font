@@ -37,7 +37,7 @@ export default {
     handleSubmit () {
       var name = 'user'
       var desc = this.desc
-      axios.post('http://localhost:5000/add', {'name': name, 'text': desc}).then(({data}) => {
+      axios.post('http://172.25.46.97:5001/add', {'name': name, 'text': desc}).then(({data}) => {
         this.desc = ''
         this.maxlength = true
       })

@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     personlist () {
-      axios.post('http://127.0.0.1:5000/all').then(({data}) => {
+      axios.post('http://172.25.46.97:5001/all').then(({data}) => {
         this.person = data
       })
     }

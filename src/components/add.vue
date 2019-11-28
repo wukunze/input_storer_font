@@ -21,15 +21,16 @@ export default {
   },
   methods: {
     descInput () {
-      let cnReg = /([\u4e00-\u9fa5]|[\u3000-\u303F]|[\uFF00-\uFF60]|[A-Za-z])/g
+      let cnReg = /([\u4e00-\u9fa5]|[A-Za-z])/g
       let mat = this.desc.match(cnReg)
-      var txtVal
+      // console.log(mat)
+      var txtLength
       if (mat) {
-        txtVal = mat.length
+        txtLength = mat.length
       } else {
-        txtVal = 0
+        txtLength = 0
       }
-      this.remnant = txtVal
+      this.remnant = txtLength
       if (this.remnant === 500) {
         this.maxlength = false
       }
